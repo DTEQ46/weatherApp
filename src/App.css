@@ -1,0 +1,729 @@
+* {
+  align-items: center;
+  color: #03093b;
+  background-image: url(./assets/DesktopCloudbg.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.header {
+  margin-left: 8rem;
+  background: none;
+}
+.header h1 {
+  position: fixed;
+  background: none;
+  color: #ffffff;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 125%;
+  letter-spacing: 0.28em;
+  text-shadow: 0px 2px 9px rgba(0, 0, 0, 0.25);
+  animation-name: tags;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+
+/* To Animate the Header
+tag (from Dark color to white) */
+
+@keyframes tags {
+  from {
+    color: #03093b;
+  }
+  to {
+    color: #ffffff;
+  }
+}
+
+.header h1::after {
+  content: "";
+  position: absolute;
+  width: 274px;
+  height: 5px;
+  left: 200px;
+  top: 56px;
+  background: red;
+  border-radius: 50px;
+  animation: fadeIn 24s forwards infinite;
+  opacity: 100%;
+  animation-delay: 400ms;
+}
+
+.fill_1 {
+  border: none;
+  background: none;
+  width: 266px;
+  border-bottom: 2px solid white;
+  border-radius: 2px;
+  font-size: 20px;
+  font-weight: 900px;
+  outline: none;
+  padding-left: 30px;
+  padding-bottom: 6px;
+  color: white;
+  position: absolute;
+  margin-left: 70px;
+  top: 242px;
+  left: 20px;
+}
+
+.fill_2 {
+  border: none;
+  background: none;
+  width: 266px;
+  border-bottom: 2px solid white;
+  border-radius: 2px;
+  font-size: 20px;
+  font-weight: 900px;
+  outline: none;
+  padding-left: 30px;
+  padding-bottom: 6px;
+  color: white;
+  position: absolute;
+  top: 242px;
+  left: 400px;
+  margin-left: 20px;
+}
+
+.fill_1:hover,
+.fill_2:hover {
+  border-bottom: 5px solid #f63c3c;
+  border-radius: 5px;
+  padding-top: 15px;
+  transition: 700ms;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(31, 243, 243);
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #ffffff;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #ffffff;
+}
+
+.Button {
+  border: none;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  color: white;
+  font-size: 22px;
+  line-height: 26px;
+  background: rgba(246, 60, 60, 0.4);
+  box-shadow: 0px 16px 48px rgba(0, 0, 0, 0.25),
+    0px 16px 48px rgba(246, 60, 60, 0.4), 0px 16px 48px #ffffff;
+  border-radius: 3px;
+  padding: 8px 26px;
+  position: absolute;
+  top: 329px;
+  left: 312px;
+}
+
+.Button {
+  border-radius: 5px;
+  transition: 0.4s;
+  display: block;
+  margin: 10px auto;
+  font-weight: bold;
+  background-color: rgb(199, 83, 83);
+}
+
+.Button:hover {
+  padding: 20px;
+  transition: 700ms;
+  border-radius: 10px;
+}
+
+.logo img {
+  background: none;
+  position: absolute;
+  top: 65%;
+  left: 300px;
+  opacity: 0%;
+  animation: fadeIn, rotate;
+  animation-duration: 800ms, 80s;
+  animation-delay: 1800ms;
+  animation-iteration-count: 1, infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in, linear;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}
+
+.temperature-card {
+  background: none;
+  width: 482px;
+  height: 600px;
+  background: rgba(3, 9, 59, 0.3);
+  box-shadow: 2px 7px 6px rgba(233, 146, 150, 0.3),
+    inset 0px 32px 60px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  position: absolute;
+  top: 30px;
+  left: 723px;
+  right: 0px;
+  /* margin: 72px 70px 30px 90px; */
+}
+
+.temperature-card h1,
+i,
+img,
+p,
+span,
+.min_max_temp {
+  background: none;
+}
+
+.temperature-card i {
+  color: white;
+  font-weight: bold;
+  font-size: 5rem;
+  position: relative;
+  left: auto;
+  top: -30px;
+}
+
+.temperature-card h1 {
+  font-family: "Roboto" sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  /* line-height: 127.69%;
+  letter-spacing: 0.095em; */
+  color: #ffffff;
+  position: relative;
+  margin: 50px 40px;
+}
+
+.temperature-card span {
+  font-family: sans-serif;
+  font-weight: 900px;
+  font-size: 24px;
+  line-height: 127.69%;
+  letter-spacing: 0.095em;
+  color: #ffffff;
+}
+
+.temperature-card .temperature {
+  font-family: sans-serif;
+  font-weight: 900px;
+  font-size: 90px;
+  color: #ffffff;
+  position: relative;
+  top: -20px;
+  left: auto;
+}
+
+.min_max_temp {
+  display: flex;
+  gap: 10px;
+  position: relative;
+  top: -40px;
+}
+
+.min_max_temp .max {
+  margin-left: 120px;
+}
+
+.temperature-card p {
+  font-family: sans-serif;
+  font-weight: 900;
+  font-size: 29px;
+  line-height: 127.69%;
+  letter-spacing: 0.095em;
+  color: #ffffff;
+  position: relative;
+  top: -40px;
+  left: auto;
+  right: auto;
+}
+
+h6 {
+  font-family: sans-serif;
+  background: rgba(14, 13, 13, 0.8);
+  border-radius: 5px;
+  position: absolute;
+  color: white;
+  margin-top: 620px;
+  margin-left: 500px;
+  padding: 5px;
+}
+
+/* Media Queries */
+
+@media (max-width: 1250px) {
+  .header {
+    margin-left: 5rem;
+  }
+  .header h1 {
+    position: fixed;
+    font-weight: 900;
+    font-size: 35px;
+    line-height: 100%;
+    letter-spacing: 0.2em;
+  }
+
+  .header h1::after {
+    content: "";
+    position: absolute;
+    width: 175px;
+    height: 5px;
+    left: 150px;
+    top: 40px;
+    border-radius: 50px;
+  }
+
+  .fill_1 {
+    width: 180px;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-bottom: 4px;
+    margin-left: 50px;
+    top: 242px;
+    left: 10px;
+  }
+
+  .fill_2 {
+    width: 180px;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-bottom: 4px;
+    top: 242px;
+    left: 300px;
+    margin-left: 10px;
+  }
+
+  .fill_1:hover,
+  .fill_2:hover {
+    padding-top: 10px;
+  }
+
+  .Button {
+    font-size: 15px;
+    line-height: 20px;
+    padding: 6px 20px;
+    margin: 8px auto;
+    top: 329px;
+    left: 230px;
+  }
+
+  .Button:hover {
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  .logo img {
+    top: 65%;
+    left: 100px;
+  }
+
+  .temperature-card {
+    width: 400px;
+    height: 500px;
+    top: 100px;
+    left: 700px;
+    right: -50px;
+  }
+
+  .temperature-card i {
+    font-size: 3rem;
+    left: auto;
+    top: -20px;
+  }
+
+  .temperature-card h1 {
+    font-size: 20px;
+    margin: 40px 30px;
+  }
+
+  .temperature-card span {
+    font-weight: 900px;
+    font-size: 16px;
+    line-height: 127.69%;
+    letter-spacing: 0.08rem;
+  }
+
+  .temperature-card .temperature {
+    font-size: 80px;
+    top: -15px;
+  }
+
+  .min_max_temp {
+    gap: 8px;
+    top: -30px;
+  }
+
+  .min_max_temp .max {
+    margin-left: 118px;
+  }
+
+  .temperature-card p {
+    font-size: 18px;
+    line-height: 127.69%;
+    letter-spacing: 0.08em;
+    top: -30px;
+  }
+
+  h6 {
+    margin-top: 620px;
+    padding: 3px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .temperature-card {
+    width: 350px;
+    height: 450px;
+    top: 100px;
+    left: 650px;
+  }
+
+  .temperature-card i {
+    font-size: 3rem;
+    left: auto;
+    top: -20px;
+  }
+
+  .temperature-card h1 {
+    font-size: 20px;
+    margin: 40px 30px;
+  }
+
+  .temperature-card span {
+    font-weight: 900px;
+    font-size: 16px;
+    line-height: 127.69%;
+    letter-spacing: 0.08rem;
+  }
+
+  .temperature-card .temperature {
+    font-size: 80px;
+    top: -15px;
+  }
+
+  .min_max_temp {
+    gap: 8px;
+    top: -30px;
+  }
+
+  .min_max_temp .max {
+    margin-left: 96px;
+  }
+
+  .temperature-card p {
+    font-size: 18px;
+    line-height: 127.69%;
+    letter-spacing: 0.08em;
+    top: -30px;
+  }
+
+  h6 {
+    margin-top: 620px;
+    padding: 3px;
+    margin-left: 350px;
+  }
+}
+
+@media (max-width: 1040px) {
+  .temperature-card {
+    width: 350px;
+    height: 450px;
+    top: 100px;
+    left: 520px;
+  }
+
+  .temperature-card i {
+    font-size: 3rem;
+    left: auto;
+    top: -20px;
+  }
+
+  .temperature-card h1 {
+    font-size: 20px;
+    margin: 40px 30px;
+  }
+
+  .temperature-card span {
+    font-weight: 900px;
+    font-size: 16px;
+    line-height: 127.69%;
+    letter-spacing: 0.08rem;
+  }
+
+  .temperature-card .temperature {
+    font-size: 80px;
+    top: -15px;
+  }
+
+  .min_max_temp {
+    gap: 8px;
+    top: -30px;
+  }
+
+  .min_max_temp .max {
+    margin-left: 96px;
+  }
+
+  .temperature-card p {
+    font-size: 18px;
+    line-height: 127.69%;
+    letter-spacing: 0.08em;
+    top: -30px;
+  }
+
+  h6 {
+    margin-top: 620px;
+    padding: 3px;
+    margin-left: 350px;
+  }
+}
+
+@media (max-width: 915px) {
+  .temperature-card {
+    width: 280px;
+    height: 400px;
+    top: 100px;
+    left: 450px;
+  }
+
+  .temperature-card i {
+    font-size: 3rem;
+    left: auto;
+    top: -20px;
+  }
+
+  .temperature-card h1 {
+    font-size: 15px;
+    margin: 40px 30px;
+  }
+
+  .temperature-card span {
+    font-weight: 900px;
+    font-size: 16px;
+    line-height: 127.69%;
+    letter-spacing: 0.08rem;
+  }
+
+  .temperature-card .temperature {
+    font-size: 80px;
+    top: -15px;
+  }
+
+  .min_max_temp {
+    gap: 8px;
+    top: -30px;
+  }
+
+  .min_max_temp .max {
+    margin-left: 76px;
+  }
+
+  .temperature-card p {
+    font-size: 16px;
+    line-height: 127.69%;
+    letter-spacing: 0.08em;
+    top: -30px;
+  }
+
+  .fill_1 {
+    width: 150px;
+    font-size: 16px;
+    padding-left: 15px;
+    padding-bottom: 4px;
+    top: 242px;
+    left: 15px;
+  }
+
+  .fill_2 {
+    width: 150px;
+    font-size: 16px;
+    padding-left: 15px;
+    padding-bottom: 4px;
+    top: 242px;
+    left: 250px;
+  }
+
+  .fill_1:hover,
+  .fill_2:hover {
+    padding-top: 10px;
+  }
+
+  .header {
+    margin-left: 3.5rem;
+  }
+
+  .Button {
+    left: 180px;
+  }
+
+  h6 {
+    margin-top: 620px;
+    padding: 3px;
+    margin-left: 250px;
+  }
+}
+
+@media (max-width: 745px) {
+  .temperature-card {
+    width: 280px;
+    height: 400px;
+    top: 150px;
+    left: 290px;
+  }
+
+  .fill_1 {
+    width: 170px;
+    font-size: 16px;
+    padding-left: 15px;
+    padding-bottom: 4px;
+    top: 120px;
+    left: 12px;
+  }
+
+  .fill_2 {
+    width: 170px;
+    font-size: 16px;
+    padding-left: 15px;
+    padding-bottom: 4px;
+    top: 220px;
+    left: 50px;
+  }
+
+  .fill_1:hover,
+  .fill_2:hover {
+    padding-top: 10px;
+  }
+
+  .header {
+    margin-left: 2.5rem;
+  }
+
+  .Button {
+    left: 85px;
+  }
+}
+
+@media (max-width: 595px) {
+
+  .fill_1 {
+    width: 170px;
+    font-size: 16px;
+    padding-left: 15px;
+    padding-bottom: 4px;
+    top: 120px;
+    left: 12px;
+  }
+
+  .fill_2 {
+    width: 170px;
+    font-size: 16px;
+    padding-left: 15px;
+    padding-bottom: 4px;
+    top: 180px;
+    left: 50px;
+  }
+
+  .fill_1:hover,
+  .fill_2:hover {
+    padding-top: 10px;
+  }
+
+  .header {
+    margin-left: 2.5rem;
+  }
+
+  .Button {
+    left: 130px;
+    top: 215px;
+  }
+
+  h6 {
+    margin-left: 118px;
+    margin-top: 600px;
+  }
+
+  .header h1 {
+    letter-spacing: 0.05em;
+  }
+  .header h1::after {
+    width: 120px;
+  }
+
+  .temperature-card {
+    width: 220px;
+    height: 300px;
+    top: 290px;
+    left: 75px;
+  }
+
+  .temperature-card i {
+    font-size: 2rem;
+    left: auto;
+    top: -50px;
+  }
+
+  .temperature-card h1 {
+    font-size: 15px;
+    margin: 40px 15px;
+    top: -100;
+  }
+
+  .temperature-card span {
+    font-weight: 900px;
+    font-size: 16px;
+    line-height: 127.69%;
+    letter-spacing: 0.08rem;
+  }
+
+  .temperature-card .temperature {
+    font-size: 50px;
+    top: -30px;
+  }
+
+  .min_max_temp {
+    gap: 8px;
+    top: -50px;
+  }
+
+  .min_max_temp .max {
+    margin-left: 55px;
+  }
+
+  .temperature-card p {
+    font-size: 14px;
+    line-height: 127.69%;
+    letter-spacing: 0.05rem;
+    top: -80px;
+  }
+
+  .cName{
+    top: -20px;
+  }
+
+}
